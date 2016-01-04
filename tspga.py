@@ -75,5 +75,5 @@ print("best after %s gens: %s; optimal: %s; delta: %s (%s%%)" %
        best,
        OPTIMAL_SOLUTION,
        best - OPTIMAL_SOLUTION,
-       int(((best - OPTIMAL_SOLUTION) / OPTIMAL_SOLUTION) * 100),
+       100.0 - round(((best - OPTIMAL_SOLUTION) / OPTIMAL_SOLUTION) * 100, 1),
        ))
