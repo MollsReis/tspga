@@ -48,10 +48,10 @@ def solve(points):
         population.sort(key=lambda s: s.distance())
 
         # retain the top solutions for next generation
-        retained = population[:][:int(POPULATION * RETAINED_PCT)]
+        retained = population[:int(POPULATION * RETAINED_PCT)]
 
         # grab a larger portion of solutions for crossover
-        selection = population[:][:int(POPULATION * SELECTION_PCT)]
+        selection = population[:int(POPULATION * SELECTION_PCT)]
         children = []
         while len(selection) > 0:
             # remove a pair of solutions from the selection
