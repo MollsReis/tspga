@@ -6,7 +6,7 @@ Solving the the [travelling salesman problem](https://en.wikipedia.org/wiki/Trav
 [initial data set](https://github.com/EvilScott/tspga/blob/master/data/western_sahara.py) the results have been very good:
 ```bash
 $ time python tspga.py 
-best after 250 gens: 28189; optimal: 27603; delta: 586 (97.9%)
+best after 250 gens: 28189; optimal: 27603; diff: 586 (2.1%)
 
 real    0m9.633s
 user    0m9.604s

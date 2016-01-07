@@ -73,10 +73,10 @@ def solve(points):
     return population[0].distance()
 
 best = int(solve(POINTS))
-print("best after %s gens: %s; optimal: %s; delta: %s (%s%%)" %
+print("best after %s gens: %s; optimal: %s; diff: %s (%s%%)" %
       (GENERATIONS,
        best,
        OPTIMAL_SOLUTION,
        best - OPTIMAL_SOLUTION,
-       100.0 - round(((best - OPTIMAL_SOLUTION) / OPTIMAL_SOLUTION) * 100, 1),
+       round(((abs(best - OPTIMAL_SOLUTION)) / ((best + OPTIMAL_SOLUTION) / 2)) * 100, 1),
        ))
