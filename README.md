@@ -6,11 +6,11 @@ Solving the the [travelling salesman problem](https://en.wikipedia.org/wiki/Trav
 [initial data set](https://github.com/EvilScott/tspga/blob/master/data/western_sahara.py) the results have been very good:
 ```bash
 $ time python tspga.py 
-best after 250 gens: 27748; optimal: 27603; delta: 145 (99.5%)
+best after 250 gens: 28189; optimal: 27603; delta: 586 (97.9%)
 
-real	0m5.351s
-user	0m5.334s
-sys	0m0.012s
+real    0m9.633s
+user    0m9.604s
+sys     0m0.017s
 ```
 
 - More data sets are available [here](http://www.math.uwaterloo.ca/tsp/world/countries.html).

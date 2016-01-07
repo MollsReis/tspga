@@ -65,6 +65,9 @@ def solve(points):
         # create the new population for the next generation
         population = retained + children
 
+        # add random solutions to top off population
+        population += list(Solution(shuffle_ret(points)) for _ in range(POPULATION - len(population)))
+
     # return the best solution
     population.sort(key=lambda s: s.distance())
     return population[0].distance()
