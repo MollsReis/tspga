@@ -2,6 +2,7 @@ from data.western_sahara import POINTS, OPTIMAL_SOLUTION
 from values import POPULATION, GENERATIONS, SELECTION_PCT, RETAINED_PCT, MUTATION_PCT
 from math import hypot
 from random import shuffle, randint, sample
+import sys
 
 
 # helper function that returns a new shuffled list
@@ -45,6 +46,9 @@ def solve(points):
 
     # generational loop
     for g in range(GENERATIONS):
+        sys.stdout.write("\b\b\b\b\b\b%s%%" % round(g / GENERATIONS * 100, 1))
+        sys.stdout.flush()
+
         population.sort(key=lambda s: s.distance())
 
         # retain the top solutions for next generation
@@ -70,6 +74,9 @@ def solve(points):
 
     # return the best solution
     population.sort(key=lambda s: s.distance())
+    sys.stdout.write("\b\b\b\b\b\b")
+    sys.stdout.flush()
+
     return population[0].distance()
 
 best = int(solve(POINTS))
