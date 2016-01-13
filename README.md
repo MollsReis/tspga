@@ -6,12 +6,13 @@ Solving the the [travelling salesman problem](https://en.wikipedia.org/wiki/Trav
 [initial data set](https://github.com/EvilScott/tspga/blob/master/data/western_sahara.py) the results have been very good:
 ```bash
 $ time python tspga.py 
-best after 250 gens: 28189; optimal: 27603; diff: 586 (2.1%)
+best after 500 gens: 28189; optimal: 27603; diff: 586 (2.1%)
 
-real    0m9.633s
-user    0m9.604s
-sys     0m0.017s
+real    1m45.875s
+user    1m45.498s
+sys     0m0.224s
 ```
 
 - More data sets are available [here](http://www.math.uwaterloo.ca/tsp/world/countries.html).
 - To edit values used for the algorithm, edit the constants found [here](https://github.com/EvilScott/tspga/blob/master/values.py).
+- Requires Python 3
